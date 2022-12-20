@@ -1,22 +1,21 @@
 #include <stdio.h>
-//test functionality:
-// n==1's FAILED (2)
-// n==10's FAILED (3)
-// n==100's PASSED (3)
-// n==1000's PASSED (4)
-// n==10000's PASSED (5)
 int main()
 {
-    int n,i;
+    int n;
     printf("Enter a positive integer\n");
     scanf("%d",&n);
-    counts_digit(n);
+    digits(n);
 }//main function
-int counts_digit(int n){
-    int i;
-    for(i=1;i<=n;i++){
-    n=n/10;
-    printf("%d\n",n);
-    }//loop
-    printf_s("number of digits is: %d",i);
-}
+int digits(int n)
+{
+    int i=0;
+    int rem,reverse=0;
+    do{
+        i++; //digits increase by 1
+        rem=n%10; //gets the remainder
+        reverse=reverse*10+rem; //multiply reverse by 10 and add the result to remainder
+        n/=10;
+    } while(n!=0);
+    printf_s("Number has %d digits \n",i); //prints digits
+    printf_s("Number is reversed to %d \n",reverse); //prints reversed
+}//digits() function
