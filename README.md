@@ -8,6 +8,7 @@ Program main() function should read an integer and calls a function that:
 For example, when n=152, digits = 3, and digits reversed = 251.
 
 Psuedo code:
+
 //program starts
 
 //reads an integer
