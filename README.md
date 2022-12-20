@@ -1,4 +1,4 @@
-# counting-and-reversing-number-digits
+# counting and reversing number digits
 Program main() function should read an integer and calls a function that:
 
 (1) counts the total digits of this number, and
